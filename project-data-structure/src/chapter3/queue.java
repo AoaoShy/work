@@ -62,3 +62,49 @@ bool Dequeue(SqQueue &S;int x){
     return true;
     }
 */
+
+
+
+/*
+//---链式队列---
+//结构
+#define MaxSize=10;
+
+typedef struct LiNode{
+    int data;
+    struct LiNode *next;
+        }LiNode;
+
+typedef struct LiQueue{
+    LiNode *front,*rear=NULL;
+        }LiQueue;
+
+//初始化
+void initLiQueue(LiQueue &Q){
+    Q.front=NULL;
+    Q.rear=NULL;
+        }
+
+//入队
+bool EnLiQueue(LiQueue &Q;int x){
+    LiNode *node = (LiNode*)malloc(sizeof(LiNode));     //申请空间
+    //初始化新节点
+    node.data=x;
+    node->next=NULL;
+    //新节点入队
+    Q->rear->next=node;
+    //改队尾指针
+    Q->rear=node
+        }
+
+//出队
+bool DeLiQueue(LiQueue &Q;int &x){
+    if(Q.front==Q.rear)
+        return false;
+    LiNode *temp = Q.front->next;
+    x=temp.data;
+    Q.front->next=temp->next;
+    if(Q.rear==temp)
+        Q.rear=Q.front;
+    free(temp);
+        }*/
